@@ -1,0 +1,1 @@
+std::iter::Flatten<std::iter::FilterMap<std::collections::hash_map::Iter<'_, std::string::String, Dir>, [closure@src/bin/day7.rs:156:25: 156:33]>>

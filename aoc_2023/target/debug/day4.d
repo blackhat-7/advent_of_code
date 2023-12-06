@@ -1,0 +1,1 @@
+/Users/illusion/Documents/randomCodes/rust/advent_of_code/aoc_2023/target/debug/day4: /Users/illusion/Documents/randomCodes/rust/advent_of_code/aoc_2023/inputs/day4.txt /Users/illusion/Documents/randomCodes/rust/advent_of_code/aoc_2023/src/bin/day4.rs

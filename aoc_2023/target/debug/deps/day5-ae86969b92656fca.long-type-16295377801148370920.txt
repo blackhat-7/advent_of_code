@@ -1,0 +1,1 @@
+std::iter::Map<std::iter::Map<std::iter::Skip<std::str::Split<'_, &str>>, [closure@src/bin/day5.rs:20:14: 20:30]>, [closure@src/bin/day5.rs:23:14: 23:23]>
