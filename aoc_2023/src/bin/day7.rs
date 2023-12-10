@@ -79,21 +79,15 @@ impl Hand {
         });
         // add count of j to 2nd most common and remove j from map
         let non_j_highest_card = map.iter()
-            .fold(None, |mut acc: Option<(&char, u64)>, (card, count)| {
+            .fold(None, |mut acc, (card, count)| {
                 if *card != 'J' {
-                    if let Some(some_acc) = acc {
-                        if some_acc.1 < *count {
-                            acc = Some((card, *count));
-                        }
-                    } else {
-                        acc = Some((card, *count));
-                    }
+                    acc = std::cmp::max(acc, Some((*count, *card)));
                 }
                 acc
             });
 
         if let Some(non_j_highest_card) = non_j_highest_card {
-            *map.entry(*non_j_highest_card.0).or_default() += *map.get(&'J').unwrap_or(&0);
+            *map.entry(non_j_highest_card.1).or_default() += *map.get(&'J').unwrap_or(&0);
             map.remove(&'J');
         }
 
