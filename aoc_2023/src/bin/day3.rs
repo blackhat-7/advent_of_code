@@ -1,14 +1,17 @@
 #![allow(dead_code)]
 
 use std::collections::HashSet;
+use std::time;
 
 #[path = "../utils.rs"]
 mod utils;
 
 fn main() {
+    let start = time::Instant::now();
     let input = utils::read_input_to_string(3);
     let res = solve2(input);
     println!("{}", res);
+    println!("{:?}", time::Instant::now().duration_since(start));
 }
 
 
